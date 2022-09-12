@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 namespace PhraseSplitService
 {
 	public class PhraseSplit
@@ -7,7 +8,9 @@ namespace PhraseSplitService
 
 		{
 			string[] splitphrase = phrase.Split(" ");
-			return splitphrase;
+			string[] sortedphrase = splitphrase.OrderBy(splitphrase => splitphrase[splitphrase.Length - 1]).ToArray();
+
+            return sortedphrase;
 
 		}
 

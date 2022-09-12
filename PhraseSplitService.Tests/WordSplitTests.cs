@@ -31,6 +31,12 @@ namespace PhraseSplitService.Tests
             string[] splitphrase = { "are", "you", "how" };
             _phraseSplit.pharaseplitconverter("how are you").Should().ContainInOrder(splitphrase);
         }
+        [Test]
+        public void Phrase_Split_Should_Return_A_Split_Phrase_Where_More_Than_Two_Words_Ending_Same_Character()
+        {
+            string[] splitphrase = { "are","the", "people","doing", "how" };
+            _phraseSplit.pharaseplitconverter("how are the people doing").Should().ContainInOrder(splitphrase);
+        }
 
 
 
