@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Linq;
+using System.Text.RegularExpressions;
+
 namespace PhraseSplitService
 {
 	public class PhraseSplit
@@ -8,7 +10,7 @@ namespace PhraseSplitService
 
 		{
 			string[] splitphrase = phrase.Split(" ");
-			string[] sortedphrase = splitphrase.OrderBy(splitphrase => splitphrase[splitphrase.Length - 1]).ToArray();
+			string[] sortedphrase = splitphrase.OrderBy(splitword => splitword[splitword.Length - 1]).ToArray();
 
             return sortedphrase;
 
