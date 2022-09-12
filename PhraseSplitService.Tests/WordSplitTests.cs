@@ -25,6 +25,13 @@ namespace PhraseSplitService.Tests
             string[] splitphrase = { "how", "are", "you"};
             _phraseSplit.pharaseplitconverter("how are you").Should().BeEquivalentTo(splitphrase);
         }
+        [Test]
+        public void Phrase_Split_Should_Return_A_Split_Phrase_In_Last_Letter_Order()
+        {
+            string[] splitphrase = { "are", "you", "how" };
+            _phraseSplit.pharaseplitconverter("how are you").Should().ContainInOrder(splitphrase);
+        }
+
 
 
 
