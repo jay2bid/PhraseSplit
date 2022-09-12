@@ -14,15 +14,20 @@ namespace PhraseSplitService.Tests
         }
 
         [Test]
-        public void Word_Split_Should_Return_Array_with_3_elements()
+        public void Phrase_Split_Should_Return_Array_with_3_elements()
         {
             string[] splitphrase = { "how", "are", "you" };
-            string phrase = "how are you";
+            _phraseSplit.pharaseplitconverter("how are you").Should().BeEquivalentTo(splitphrase);
+        }
+        [Test]
+        public void Phrase_Split_Should_Return_A_Split_Phrase()
+        {
+            string[] splitphrase = { "how"};
             _phraseSplit.pharaseplitconverter("how are you").Should().BeEquivalentTo(splitphrase);
         }
 
 
-        
-	}
+
+    }
 }
 
