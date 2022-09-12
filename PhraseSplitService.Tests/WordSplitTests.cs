@@ -22,7 +22,7 @@ namespace PhraseSplitService.Tests
         [Test]
         public void Phrase_Split_Should_Return_A_Split_Phrase()
         {
-            string[] splitphrase = { "how"};
+            string[] splitphrase = { "how", "are", "you"};
             _phraseSplit.pharaseplitconverter("how are you").Should().BeEquivalentTo(splitphrase);
         }
 

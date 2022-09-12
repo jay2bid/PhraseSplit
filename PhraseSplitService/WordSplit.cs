@@ -6,7 +6,7 @@ namespace PhraseSplitService
 		public string[] pharaseplitconverter(string phrase)
 
 		{
-			string[] splitphrase = { "how","are","you"};
+			string[] splitphrase = phrase.Split(" ");
 			return splitphrase;
 
 		}
